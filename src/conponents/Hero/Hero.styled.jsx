@@ -111,7 +111,7 @@ export const HeroPictureContainer = styled.div`
   position: relative;
   display: flex;
   align-items: center;
-  max-width: 669px;
+  /* max-width: 669px; */
 `;
 
 export const HeroPicture = styled.img`

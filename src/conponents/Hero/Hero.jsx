@@ -14,6 +14,7 @@ import {
   HeroTitle,
   HeroTitleContainer,
   HeroTitleSpan,
+  GradientLayerBottom,
 } from './Hero.styled';
 import { discount, robot } from '../../assets';
 import GetStarted from '../GetStarted';
@@ -42,9 +43,10 @@ const Hero = () => {
       </HeroContainer>
       <HeroPictureContainer>
         <HeroPicture src={robot} alt="Robot arm" />
-        <GradientEllipse zIndex={0} />
         <GradientTrapezoid zIndex={0} />
-        <GradientSkew zIndex={0} />
+        <GradientEllipse zIndex={1} />
+        <GradientSkew zIndex={2} />
+        {/* <GradientLayerBottom /> */}
       </HeroPictureContainer>
     </HeroSection>
   );

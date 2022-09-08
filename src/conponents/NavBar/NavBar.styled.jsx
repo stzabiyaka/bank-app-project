@@ -39,9 +39,9 @@ export const NavList = styled.ul`
   border-radius: ${({ theme }) => theme.roundRadius};
 
   @media screen and (max-width: 767px) {
-    animation: ${({ theme }) => theme.slideBar.animation};
+    animation: ${({ theme }) => theme.sideBar.animation};
 
-    ${({ theme }) => theme.slideBar.keyFrames};
+    ${({ theme }) => theme.sideBar.keyFrames};
 
     &.hidden {
       display: none;
@@ -95,5 +95,5 @@ export const MenuButton = styled.button`
 export const MenuIcon = styled.img`
   display: block;
   object-fit: contain;
-  fill: currentColor;
+  color: inherit;
 `;

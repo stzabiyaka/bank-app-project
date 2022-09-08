@@ -10,6 +10,7 @@ export const GetStartedButton = styled.button`
   cursor: pointer;
 
   border-radius: 50%;
+  border: none;
   background: ${({ theme }) => theme.bgGradients.blueGradient};
 
   @media screen and (min-width: ${({ theme }) => theme.screens.lg}) {
@@ -18,6 +19,13 @@ export const GetStartedButton = styled.button`
     right: 60px;
 
     z-index: 2;
+
+    transition: box-shadow ${({ theme }) => theme.transitions.timeFunction};
+
+    &:hover,
+    &:focus {
+      box-shadow: ${({ theme }) => theme.shadows.buttonShadow};
+    }
   }
 `;
 

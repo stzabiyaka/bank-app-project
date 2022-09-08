@@ -1,1 +1,25 @@
 import styled from '@emotion/styled';
+
+export const Button = styled.button`
+  display: flex;
+  align-items: center;
+  padding: 18px 33px;
+
+  font-size: 18px;
+  line-height: 1.5;
+  font-weight: 500;
+  text-transform: capitalize;
+
+  color: ${({ theme }) => theme.palette.primary};
+  border: none;
+
+  border-radius: 10px;
+  background: ${({ theme }) => theme.bgGradients.blueGradient};
+
+  transition: box-shadow ${({ theme }) => theme.transitions.timeFunction};
+
+  &:hover,
+  &:focus {
+    box-shadow: ${({ theme }) => theme.shadows.buttonShadow};
+  }
+`;

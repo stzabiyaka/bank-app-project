@@ -158,3 +158,19 @@ export const GradientTrapezoid = styled.div`
   background: ${({ theme }) => theme.bgGradients.navyGradient};
   filter: blur(123px);
 `;
+
+export const GradientLayerBottom = styled.div`
+  position: absolute;
+  width: 85%;
+  height: 100%;
+  bottom: 0;
+  border-radius: 50%;
+  z-index: 1;
+  transform-origin: bottom center;
+  transform: perspective(70vh) rotateX(-65deg);
+  background-image: ${({ theme }) => theme.bgGradients.navyGradient};
+  background-size: 40% 100%;
+  background-position: bottom 24vh left 50%;
+  background-repeat: no-repeat;
+  filter: blur(123px);
+`;

@@ -1,5 +1,4 @@
 import styled from '@emotion/styled';
-import { theme } from '../../utilities/styles';
 
 export const BillingImagesContainer = styled.div`
   position: relative;
@@ -22,13 +21,32 @@ export const BillingPicture = styled.img`
 export const IconsList = styled.ul`
   list-style: none;
   display: flex;
+  justify-content: center;
   padding: 0;
+  margin: 0 0 20px 0;
+  @media screen and (min-width: ${({ theme }) => theme.screens.sm}) {
+    justify-content: flex-start;
+  }
 `;
 
 export const IconsListItem = styled.li`
-  display: block;
   &:not(:last-child) {
+    margin-right: 12px;
+  }
+
+  @media screen and (min-width: ${({ theme }) => theme.screens.sm}) {
     margin-right: 32px;
+  }
+`;
+
+export const StoreLink = styled.a`
+  color: ${({ theme }) => theme.palette.primary};
+  text-decoration: none;
+  /* transition: box-shadow ${({ theme }) => theme.transitions.timeFunction}; */
+
+  &:hover,
+  &:focus {
+    box-shadow: ${({ theme }) => theme.shadows.buttonShadow};
   }
 `;
 
@@ -60,14 +78,4 @@ export const GradientLayer_2 = styled.div`
   z-index: ${({ zIndex }) => zIndex};
   transform: rotate(156.61deg);
   filter: blur(900px);
-`;
-
-export const StoreLink = styled.a`
-  text-decoration: none;
-  transition: box-shadow ${({ theme }) => theme.transitions.timeFunction};
-
-  &:hover,
-  &:focus {
-    box-shadow: ${({ theme }) => theme.shadows.buttonShadow};
-  }
 `;

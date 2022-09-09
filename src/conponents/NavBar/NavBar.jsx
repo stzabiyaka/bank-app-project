@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { NAV_LINKS } from '../../constatnts';
-import { menu, close } from '../../assets';
+import { icons } from '../../assets';
 import {
   NavBarContainer,
   NavList,
@@ -19,9 +19,13 @@ const NavBar = () => {
         aria-label="Toggle navigation menu"
       >
         {toggleMenu ? (
-          <MenuIcon src={close} alt="Close menu" title="Close menu" />
+          <MenuIcon aria-label="Close menu">
+            <use href={`${icons}#icon-close`} />
+          </MenuIcon>
         ) : (
-          <MenuIcon src={menu} alt="Open menu" title="Open menu" />
+          <MenuIcon aria-label="Open menu">
+            <use href={`${icons}#icon-menu`} />
+          </MenuIcon>
         )}
       </MenuButton>
       <NavList className={toggleMenu ? '' : 'hidden'}>

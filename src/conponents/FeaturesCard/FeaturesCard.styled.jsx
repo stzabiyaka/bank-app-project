@@ -34,12 +34,11 @@ export const FeatureCardIcon = styled.div`
   background-color: ${({ theme }) => theme.palette.dimBlue};
 `;
 
-export const FeatureCardIconImage = styled.img`
-  display: flex;
-  align-items: center;
-  width: 50%;
-  height: 50%;
+export const FeatureCardIconImage = styled.svg`
+  width: 32px;
+  height: 32px;
   object-fit: contain;
+  fill: ${({ theme }) => theme.palette.secondary};
 `;
 
 export const FeatureCardInfo = styled.div`

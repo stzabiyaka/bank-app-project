@@ -92,8 +92,9 @@ export const MenuButton = styled.button`
   }
 `;
 
-export const MenuIcon = styled.img`
-  display: block;
+export const MenuIcon = styled.svg`
+  min-width: 28px;
+  min-height: 28px;
   object-fit: contain;
-  color: inherit;
+  fill: currentColor;
 `;

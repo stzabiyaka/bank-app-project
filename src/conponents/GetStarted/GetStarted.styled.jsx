@@ -19,11 +19,13 @@ export const GetStartedButton = styled.button`
     right: 60px;
 
     z-index: 2;
+    color: ${({ theme }) => theme.palette.triadic};
 
     transition: box-shadow ${({ theme }) => theme.transitions.timeFunction};
 
     &:hover,
     &:focus {
+      color: ${({ theme }) => theme.palette.secondary};
       box-shadow: ${({ theme }) => theme.shadows.buttonShadow};
     }
   }
@@ -54,10 +56,10 @@ export const GetStartedGradientSpan = styled.span`
   font-weight: 500;
 `;
 
-export const GetStartedIcon = styled.img`
-  display: inline-block;
+export const GetStartedIcon = styled.svg`
+  /* display: inline-block; */
   width: 23px;
   height: 23px;
   margin-left: 4px;
-  object-fit: contain;
+  fill: currentColor;
 `;

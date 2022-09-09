@@ -1,10 +1,11 @@
 import styled from '@emotion/styled';
 
 export const StatsList = styled.ul`
-  padding: 0;
   display: flex;
   flex-direction: column;
   width: 100%;
+  padding: 0;
+  margin: 0;
 
   @media screen and (min-width: ${({ theme }) => theme.screens.sm}) {
     flex-direction: row;

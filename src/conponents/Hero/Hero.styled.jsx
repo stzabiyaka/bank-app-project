@@ -35,10 +35,11 @@ export const Discount = styled.div`
   border-radius: 10px;
 `;
 
-export const DiscountIcon = styled.img`
+export const DiscountIcon = styled.svg`
   width: 32px;
   height: 32px;
   margin-right: 13px;
+  fill: ${({ theme }) => theme.palette.secondary};
 `;
 
 export const DiscountText = styled.p`

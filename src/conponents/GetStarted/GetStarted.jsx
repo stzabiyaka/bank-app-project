@@ -1,4 +1,4 @@
-import { arrowUp } from '../../assets';
+import { icons } from '../../assets';
 import {
   GetStartedButton,
   GetStartedButtonContent,
@@ -12,7 +12,9 @@ const GetStarted = () => {
       <GetStartedButtonContent>
         <GetStartedGradientSpan>
           Get
-          <GetStartedIcon src={arrowUp} alt="arrow up" title="Get started" />
+          <GetStartedIcon aria-label="Get started">
+            <use href={`${icons}#icon-arrow-up`} />
+          </GetStartedIcon>
         </GetStartedGradientSpan>
         <GetStartedGradientSpan>Started</GetStartedGradientSpan>
       </GetStartedButtonContent>

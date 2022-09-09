@@ -6,12 +6,15 @@ import {
   FeatureCardInfoTitle,
   FeaturesCardContainer,
 } from './FeaturesCard.styled';
+import { icons } from '../../assets';
 
 const FeaturesCard = ({ icon, title, content }) => {
   return (
     <FeaturesCardContainer>
       <FeatureCardIcon>
-        <FeatureCardIconImage src={icon} />
+        <FeatureCardIconImage>
+          <use href={`${icons}#icon-${icon}`} />
+        </FeatureCardIconImage>
       </FeatureCardIcon>
       <FeatureCardInfo>
         <FeatureCardInfoTitle>{title}</FeatureCardInfoTitle>

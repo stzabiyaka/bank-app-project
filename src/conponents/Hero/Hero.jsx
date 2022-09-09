@@ -16,7 +16,7 @@ import {
   HeroTitleSpan,
   GradientLayerBottom,
 } from './Hero.styled';
-import { discount, robot } from '../../assets';
+import { icons, robot } from '../../assets';
 import GetStarted from '../GetStarted';
 
 const Hero = () => {
@@ -24,7 +24,9 @@ const Hero = () => {
     <HeroSection>
       <HeroContainer>
         <Discount>
-          <DiscountIcon src={discount} alt="Discount" />
+          <DiscountIcon aria-label="Discount">
+            <use href={`${icons}#icon-discount`} />
+          </DiscountIcon>
           <DiscountText>
             20%<DiscountSpan> Discount for </DiscountSpan>1 month{' '}
             <DiscountSpan>account</DiscountSpan>

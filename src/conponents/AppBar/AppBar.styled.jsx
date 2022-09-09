@@ -7,8 +7,7 @@ export const AppBarContainer = styled.header`
   width: 100%;
 `;
 
-export const LogoImg = styled.img`
-  display: block;
+export const LogoIcon = styled.svg`
   width: 32px;
   height: 32px;
   margin-right: 4px;

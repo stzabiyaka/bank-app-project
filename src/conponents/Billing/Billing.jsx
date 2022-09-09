@@ -28,12 +28,22 @@ const Billing = () => {
           </InfoText>
           <IconsList>
             <IconsListItem>
-              <StoreLink href="#" title="Go to Apple Store">
+              <StoreLink
+                href="https://www.apple.com/app-store/"
+                title="Go to Apple Store"
+                rel="noreferrer noopener nofollow"
+                target="_blank"
+              >
                 <Icon src={apple} alt="Apple Store" />
               </StoreLink>
             </IconsListItem>
             <IconsListItem>
-              <StoreLink href="#" title="Go to Google Play">
+              <StoreLink
+                href="https://play.google.com/"
+                title="Go to Google Play"
+                rel="noreferrer noopener nofollow"
+                target="_blank"
+              >
                 <Icon src={google} alt="Google Play" />
               </StoreLink>
             </IconsListItem>

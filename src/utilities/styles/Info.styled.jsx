@@ -25,7 +25,7 @@ export const InfoText = styled.p`
   margin: 0 0 24px 0;
   max-width: 570px;
 
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.7;
   font-weight: 400;
   letter-spacing: 0.01em;

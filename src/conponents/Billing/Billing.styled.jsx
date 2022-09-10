@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 
-export const BillingImagesContainer = styled.div`
+export const BillingPictureContainer = styled.div`
   position: relative;
   display: flex;
   align-items: center;

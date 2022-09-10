@@ -1,7 +1,7 @@
 import { Section, Container, InfoContainer, InfoTitle, InfoText } from '../../utilities/styles';
 import { apple, google, bill } from '../../assets';
 import {
-  BillingImagesContainer,
+  BillingPictureContainer,
   BillingPicture,
   GradientLayer_1,
   GradientLayer_2,
@@ -15,11 +15,11 @@ const Billing = () => {
   return (
     <Section id="product">
       <Container reverse>
-        <BillingImagesContainer>
+        <BillingPictureContainer>
           <BillingPicture src={bill} alt="Billing" />
           <GradientLayer_1 zIndex={3} />
           <GradientLayer_2 zIndex={0} />{' '}
-        </BillingImagesContainer>
+        </BillingPictureContainer>
         <InfoContainer>
           <InfoTitle>Easily control your billing & invoicing.</InfoTitle>
           <InfoText>

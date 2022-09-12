@@ -20,6 +20,8 @@ export const theme = {
   padding: {
     padding: '6px',
     paddingSm: '16px',
+    section: '90px',
+    sectionSm: '45px',
   },
   bgGradients: {
     blueGradient:
@@ -50,5 +52,11 @@ export const theme = {
   },
   transitions: {
     timeFunction: '0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94)',
+  },
+  typography: {
+    paragraph: '18px',
+    paragraphSm: '16px',
+    title: '48px',
+    titleSm: '38px',
   },
 };

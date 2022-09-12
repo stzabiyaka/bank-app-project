@@ -3,12 +3,14 @@ import styled from '@emotion/styled';
 export const Button = styled.button`
   display: flex;
   align-items: center;
+  width: fit-content;
   padding: 18px 33px;
 
   font-size: 18px;
   line-height: 1.5;
   font-weight: 500;
   text-transform: capitalize;
+  cursor: pointer;
 
   color: ${({ theme }) => theme.palette.primary};
   border: none;

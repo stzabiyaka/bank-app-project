@@ -42,7 +42,7 @@ export const theme = {
     cardShadow: '0 20px 100px -10px rgba(66, 71, 91, 0.1)',
     buttonShadow: '0 0 24px white',
   },
-  roundRadius: '16px',
+  roundRadius: '20px',
   sideBar: {
     animation: 'slide-top 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94)',
     keyFrames:

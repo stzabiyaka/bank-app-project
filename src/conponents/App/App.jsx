@@ -9,22 +9,22 @@ import Testimonials from '../Testimonials';
 import Clients from '../Clients';
 import ClickToAction from '../ClickToAction';
 import Footer from '../Footer';
-import FeedbackCard from '../FeedbackCard';
-import GetStarted from '../GetStarted';
-import { AppContainer } from '.';
+import { AppContainer, Main } from '.';
 
 const App = () => {
   return (
     <AppContainer>
       <AppBar />
-      <Hero />
-      <Stats />
-      <Features />
-      <Billing />
-      <CardDeal />
-      <Testimonials />
-      <Clients />
-      <ClickToAction />
+      <Main>
+        <Hero />
+        <Stats />
+        <Features />
+        <Billing />
+        <CardDeal />
+        <Testimonials />
+        <Clients />
+        <ClickToAction />
+      </Main>
       <Footer />
     </AppContainer>
   );

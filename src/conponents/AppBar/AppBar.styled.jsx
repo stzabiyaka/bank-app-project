@@ -1,10 +1,18 @@
 import styled from '@emotion/styled';
 
-export const AppBarContainer = styled.header`
+export const Header = styled.header`
+  display: flex;
+  justify-content: center;
+  width: 100%;
+`;
+
+export const AppBarContainer = styled.div`
   position: relative;
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  width: 100%;
+  max-width: ${({ theme }) => theme.container.max};
+  width: calc(100% - (${({ theme }) => theme.padding.paddingSm} * 2));
 `;
 
 export const LogoIcon = styled.svg`
@@ -19,15 +27,25 @@ export const LogoSpan = styled.span`
 export const LogoLink = styled.a`
   display: flex;
   align-items: center;
-  padding: 30px 0;
+  padding: ${({ theme }) => theme.padding.paddingSm} 0;
+
   font-size: 18px;
   font-weight: 600;
   line-height: 1.3;
-  color: ${({ theme }) => theme.palette.triadic};
   text-decoration: none;
+
+  color: ${({ theme }) => theme.palette.triadic};
+
+  transition: color, filter, transform ${({ theme }) => theme.transitions.timeFunction};
+
+  @media screen and (min-width: ${({ theme }) => theme.screens.tablet}) {
+    padding: calc(${({ theme }) => theme.padding.paddingSm} * 2) 0;
+  }
 
   &:hover,
   &:focus {
     color: ${({ theme }) => theme.palette.secondary};
+    filter: drop-shadow(5px 5px 5px ${({ theme }) => theme.palette.dimWhite});
+    transform: translateY(-2px);
   }
 `;

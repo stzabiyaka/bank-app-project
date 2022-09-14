@@ -1,14 +1,13 @@
 import NavBar from '../NavBar';
 import { icons } from '../../assets';
 import { NAV_LINKS } from '../../constatnts';
-import { Container } from '../../utilities/styles';
-import { AppBarContainer } from './AppBar.styled';
-import { LogoLink, LogoIcon, LogoSpan } from './AppBar.styled';
+import { Header } from './AppBar.styled';
+import { AppBarContainer, LogoLink, LogoIcon, LogoSpan } from './AppBar.styled';
 
 const AppBar = () => {
   const ref = NAV_LINKS[0];
   return (
-    <Container>
+    <Header>
       <AppBarContainer>
         <LogoLink href={`#${ref.id}`} title={ref.title}>
           <LogoIcon aria-label="HooBank logo">
@@ -18,7 +17,7 @@ const AppBar = () => {
         </LogoLink>
         <NavBar />
       </AppBarContainer>
-    </Container>
+    </Header>
   );
 };
 export default AppBar;

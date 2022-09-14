@@ -11,7 +11,7 @@ import { CardDealPicture, CardDealPictureContainer } from './CardDeal.styled';
 
 const CardDeal = () => {
   return (
-    <Section>
+    <Section pb="70px">
       <Container>
         <InfoContainer left>
           <InfoTitle>Find a better card deal in few easy steps.</InfoTitle>

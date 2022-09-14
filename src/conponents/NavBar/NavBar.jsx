@@ -12,26 +12,23 @@ import {
 
 const NavBar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
+  const buttonTitle = toggleMenu ? 'Close menu' : 'Open menu';
+  const iconHref = toggleMenu ? `${icons}#icon-close` : `${icons}#icon-menu`;
   return (
     <NavBarContainer>
       <MenuButton
         onClick={() => setToggleMenu(state => !state)}
-        aria-label="Toggle navigation menu"
+        aria-label={buttonTitle}
+        title={buttonTitle}
       >
-        {toggleMenu ? (
-          <MenuIcon aria-label="Close menu">
-            <use href={`${icons}#icon-close`} />
-          </MenuIcon>
-        ) : (
-          <MenuIcon aria-label="Open menu">
-            <use href={`${icons}#icon-menu`} />
-          </MenuIcon>
-        )}
+        <MenuIcon aria-label={buttonTitle}>
+          <use href={iconHref} />
+        </MenuIcon>
       </MenuButton>
       <NavList className={toggleMenu ? '' : 'hidden'}>
-        {NAV_LINKS.map(element => (
-          <NavListItem key={element.id}>
-            <NavLink href={`#${element.id}`}>{element.title}</NavLink>
+        {NAV_LINKS.map(({ id, title }) => (
+          <NavListItem key={id}>
+            <NavLink href={`#${id}`}>{title}</NavLink>
           </NavListItem>
         ))}
       </NavList>

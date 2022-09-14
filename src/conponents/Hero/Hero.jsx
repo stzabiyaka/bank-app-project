@@ -4,17 +4,13 @@ import {
   DiscountIcon,
   DiscountSpan,
   DiscountText,
-  GradientSkew,
-  GradientEllipse,
-  GradientTrapezoid,
   HeroPicture,
   HeroPictureContainer,
   HeroSection,
   HeroText,
   HeroTitle,
-  HeroTitleContainer,
   HeroTitleSpan,
-  GradientLayerBottom,
+  HeroInfo,
 } from './Hero.styled';
 import { icons, robot } from '../../assets';
 import GetStarted from '../GetStarted';
@@ -23,33 +19,29 @@ const Hero = () => {
   return (
     <HeroSection>
       <HeroContainer>
-        <Discount>
-          <DiscountIcon aria-label="Discount">
-            <use href={`${icons}#icon-discount`} />
-          </DiscountIcon>
-          <DiscountText>
-            20%<DiscountSpan> Discount for </DiscountSpan>1 month{' '}
-            <DiscountSpan>account</DiscountSpan>
-          </DiscountText>
-        </Discount>
-        <HeroTitleContainer>
+        <HeroInfo>
+          <Discount>
+            <DiscountIcon aria-label="Discount">
+              <use href={`${icons}#icon-discount`} />
+            </DiscountIcon>
+            <DiscountText>
+              20%<DiscountSpan> Discount for </DiscountSpan>1 month{' '}
+              <DiscountSpan>account</DiscountSpan>
+            </DiscountText>
+          </Discount>
           <HeroTitle>
-            The Next <HeroTitleSpan>Generation</HeroTitleSpan> Payment Method.
+            The Next <HeroTitleSpan>Generation </HeroTitleSpan>Payment Method.
           </HeroTitle>
+          <HeroText>
+            Our team of experts uses a methodology to identify the credit cards most likely to fit
+            your needs. We examine annual percentage rates, annual fees.
+          </HeroText>
           <GetStarted />
-        </HeroTitleContainer>
-        <HeroText>
-          Our team of experts uses a methodology to identify the credit cards most likely to fit
-          your needs. We examine annual percentage rates, annual fees.
-        </HeroText>
+        </HeroInfo>
+        <HeroPictureContainer>
+          <HeroPicture src={robot} alt="Robot arm" />
+        </HeroPictureContainer>
       </HeroContainer>
-      <HeroPictureContainer>
-        <HeroPicture src={robot} alt="Robot arm" />
-        <GradientTrapezoid zIndex={0} />
-        <GradientEllipse zIndex={1} />
-        <GradientSkew zIndex={2} />
-        {/* <GradientLayerBottom /> */}
-      </HeroPictureContainer>
     </HeroSection>
   );
 };

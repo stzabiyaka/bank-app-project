@@ -4,78 +4,83 @@ export const BillingPictureContainer = styled.div`
   position: relative;
   display: flex;
   align-items: center;
-  max-width: 600px;
+  max-width: 100%;
 
-  @media screen and (min-width: ${({ theme }) => theme.screens.sm}) {
+  @media screen and (min-width: ${({ theme }) => theme.screens.tablet}) {
     margin-right: 6px;
+
+    max-width: 600px;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -20%;
+    left: -70%;
+    width: 63%;
+    height: 81%;
+    border-radius: 50%;
+    background: ${({ theme }) => theme.bgGradients.whiteGradient};
+    filter: blur(750px);
+
+    transform: rotate(176.62deg);
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 45%;
+    left: -50%;
+    width: 27%;
+    height: 88%;
+    border-radius: 50%;
+    background: ${({ theme }) => theme.bgGradients.pinkGradient};
+    transform: rotate(156.61deg);
+    filter: blur(900px);
   }
 `;
 
 export const BillingPicture = styled.img`
-  display: block;
-  max-width: 100%;
-  object-fit: contain;
   z-index: 5;
 `;
 
 export const IconsList = styled.ul`
-  list-style: none;
   display: flex;
   justify-content: center;
-  padding: 0;
-  margin: 0 0 20px 0;
-  @media screen and (min-width: ${({ theme }) => theme.screens.sm}) {
+  margin-bottom: 20px;
+  margin-left: 12px;
+
+  @media screen and (min-width: ${({ theme }) => theme.screens.tablet}) {
     justify-content: flex-start;
+    margin-bottom: 0;
   }
 `;
 
 export const IconsListItem = styled.li`
+  min-width: 122px;
   &:not(:last-child) {
     margin-right: 12px;
   }
 
-  @media screen and (min-width: ${({ theme }) => theme.screens.sm}) {
-    margin-right: 32px;
+  @media screen and (min-width: ${({ theme }) => theme.screens.tablet}) {
+    &:not(:last-child) {
+      margin-right: 42px;
+    }
   }
 `;
 
 export const StoreLink = styled.a`
-  color: ${({ theme }) => theme.palette.primary};
+  color: ${({ theme }) => theme.palette.triadic};
   text-decoration: none;
-  /* transition: box-shadow ${({ theme }) => theme.transitions.timeFunction}; */
+  transition: color, filter ${({ theme }) => theme.transitions.timeFunction};
 
   &:hover,
   &:focus {
-    box-shadow: ${({ theme }) => theme.shadows.buttonShadow};
+    color: ${({ theme }) => theme.palette.secondary};
+    filter: drop-shadow(5px 5px 5px ${({ theme }) => theme.palette.dimWhite});
   }
 `;
 
-export const Icon = styled.img`
-  display: block;
-  max-width: 100%;
-`;
-
-export const GradientLayer_1 = styled.div`
-  position: absolute;
-  top: -20%;
-  left: -60%;
-  width: 60%;
-  height: 70%;
-  border-radius: 50%;
-  background: ${({ theme }) => theme.bgGradients.whiteGradient};
-  z-index: ${({ zIndex }) => zIndex};
-  filter: blur(750px);
-`;
-
-export const GradientLayer_2 = styled.div`
-  position: absolute;
-  top: 50%;
-  left: -70%;
-  width: 60%;
-  height: 75%;
-  border-radius: 50%;
-  background: ${({ theme }) => theme.bgGradients.pinkGradient};
-  z-index: ${({ zIndex }) => zIndex};
-  transform: rotate(156.61deg);
-  filter: blur(900px);
+export const Icon = styled.svg`
+  fill: currentColor;
 `;

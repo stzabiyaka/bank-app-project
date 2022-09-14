@@ -8,17 +8,19 @@ export const FeaturesCardContainer = styled.li`
   border-radius: 20px;
   cursor: default;
 
+  transition: background, box-shadow ${({ theme }) => theme.transitions.timeFunction};
+
   &:not(:last-child) {
     margin-bottom: 10px;
   }
 
-  @media screen and (min-width: ${({ theme }) => theme.screens.sm}) {
+  @media screen and (min-width: ${({ theme }) => theme.screens.tablet}) {
     margin-bottom: 20px;
   }
 
   &:hover {
     background: ${({ theme }) => theme.bgGradients.blackGradient};
-    box-shadow: 0px 20px 100px -10px rgba(66, 71, 91, 0.1);
+    box-shadow: ${({ theme }) => theme.shadows.cardShadow};
   }
 `;
 
@@ -50,15 +52,11 @@ export const FeatureCardInfoTitle = styled.h4`
   margin: 0;
   margin-bottom: 8px;
 
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.3;
   font-weight: 600;
   letter-spacing: 0.01em;
   text-transform: capitalize;
-
-  @media screen and (min-width: ${({ theme }) => theme.screens.sm}) {
-    font-size: 18px;
-  }
 `;
 
 export const FeatureCardInfoText = styled.p`
@@ -71,7 +69,7 @@ export const FeatureCardInfoText = styled.p`
 
   color: ${({ theme }) => theme.palette.dimWhite};
 
-  @media screen and (min-width: ${({ theme }) => theme.screens.sm}) {
+  @media screen and (min-width: ${({ theme }) => theme.screens.tablet}) {
     font-size: 16px;
   }
 `;

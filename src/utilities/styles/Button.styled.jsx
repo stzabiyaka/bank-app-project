@@ -3,7 +3,8 @@ import styled from '@emotion/styled';
 export const Button = styled.button`
   display: flex;
   align-items: center;
-  width: fit-content;
+  min-width: fit-content;
+
   padding: 18px 33px;
 
   font-size: 18px;
@@ -18,10 +19,11 @@ export const Button = styled.button`
   border-radius: 10px;
   background: ${({ theme }) => theme.bgGradients.blueGradient};
 
-  transition: box-shadow ${({ theme }) => theme.transitions.timeFunction};
+  transition: box-shadow, transform ${({ theme }) => theme.transitions.timeFunction};
 
   &:hover,
   &:focus {
     box-shadow: ${({ theme }) => theme.shadows.buttonShadow};
+    transform: translateY(-2px);
   }
 `;

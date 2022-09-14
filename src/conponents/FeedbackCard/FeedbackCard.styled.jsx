@@ -3,8 +3,9 @@ import styled from '@emotion/styled';
 export const FeedbsckCardContainer = styled.li`
   display: flex;
   flex-direction: column;
-  padding: 20px 10px;
-  flex-basis: calc(100% - 60px);
+  padding: 30px 20px;
+  flex-basis: 80%;
+  z-index: 1;
 
   color: rgba(0, 217, 245, 0.6);
   border: none;
@@ -13,13 +14,21 @@ export const FeedbsckCardContainer = styled.li`
   transition: background ${({ theme }) => theme.transitions.timeFunction};
 
   &:not(:last-child) {
-    margin-bottom: 10px;
+    margin-bottom: 24px;
   }
 
-  @media screen and (min-width: ${({ theme }) => theme.screens.sm}) {
-    padding: 60px 40px;
+  @media screen and (min-width: ${({ theme }) => theme.screens.tablet}) {
+    flex-basis: calc(100% - 20px);
     &:not(:last-child) {
       margin-bottom: 0;
+      margin-right: 10px;
+    }
+  }
+
+  @media screen and (min-width: ${({ theme }) => theme.screens.desktop}) {
+    flex-basis: calc(100% - 60px);
+    padding: 60px 40px;
+    &:not(:last-child) {
       margin-right: 30px;
     }
   }
@@ -37,8 +46,7 @@ export const Icon = styled.svg`
 `;
 
 export const FeedbackContent = styled.p`
-  margin: 0 0 30px 0;
-  padding: 0;
+  margin-bottom: 30px;
 
   font-size: 16px;
   line-height: 1.8;
@@ -47,7 +55,7 @@ export const FeedbackContent = styled.p`
 
   color: ${({ theme }) => theme.palette.triadic};
 
-  @media screen and (min-width: ${({ theme }) => theme.screens.sm}) {
+  @media screen and (min-width: ${({ theme }) => theme.screens.tablet}) {
     font-size: 18px;
   }
 `;
@@ -69,8 +77,6 @@ export const AuthorDetails = styled.div``;
 
 export const AuthorName = styled.h4`
   display: block;
-  margin: 0;
-  padding: 0;
 
   color: ${({ theme }) => theme.palette.triadic};
 
@@ -81,8 +87,6 @@ export const AuthorName = styled.h4`
 
 export const AuthorTitle = styled.p`
   display: block;
-  margin: 0;
-  padding: 0;
 
   color: ${({ theme }) => theme.palette.triadic};
   opacity: 0.5;

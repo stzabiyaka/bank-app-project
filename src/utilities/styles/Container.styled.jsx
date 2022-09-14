@@ -4,12 +4,11 @@ export const Container = styled.div`
   display: flex;
   flex-direction: ${({ reverse }) => (reverse ? 'column-reverse' : 'column')};
   align-items: center;
-  max-width: 1170px;
   width: calc(100% - (${({ theme }) => theme.padding.paddingSm} * 2));
 
-  @media screen and (min-width: ${({ theme }) => theme.screens.sm}) {
+  @media screen and (min-width: ${({ theme }) => theme.screens.tablet}) {
     flex-direction: row;
     justify-content: space-between;
-    width: calc(100% - (${({ theme }) => theme.padding.paddingSm} * 2));
+    max-width: ${({ theme }) => theme.container.max};
   }
 `;

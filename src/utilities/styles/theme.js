@@ -5,23 +5,33 @@ export const theme = {
     triadic: '#ffffff',
     dimWhite: 'rgba(255, 255, 255, 0.7)',
     dimBlue: 'rgba(9, 151, 124, 0.1)',
+    shaded: '#00D9F5',
   },
   fontFamily: {
     poppins: ['Poppins', 'sans-serif'],
   },
   screens: {
     xs: '480px',
+    mobile: '480px',
     ss: '620px',
     sm: '768px',
+    tablet: '768px',
     md: '1060px',
     lg: '1200px',
-    xl: '1700px',
+    desktop: '1200px',
+    desktopXl: '1440px',
+  },
+  container: {
+    max: '1170px',
+    min: `288px`,
+    maxHero: '1440px',
   },
   padding: {
     padding: '6px',
     paddingSm: '16px',
-    section: '90px',
-    sectionSm: '45px',
+    section: '32px',
+    sectionTablet: '45px',
+    sectionDesktop: '100px',
   },
   bgGradients: {
     blueGradient:
@@ -42,7 +52,7 @@ export const theme = {
   shadows: {
     basicShadow: '0 20px 100px -10px rgba(66, 71, 91, 0.1)',
     cardShadow: '0 20px 100px -10px rgba(66, 71, 91, 0.1)',
-    buttonShadow: '0 0 24px white',
+    buttonShadow: '0 0 24px rgba(0, 217, 245, 0.6)',
   },
   roundRadius: '20px',
   sideBar: {
@@ -51,11 +61,12 @@ export const theme = {
       '@keyframes slide-top {0% { transform: translateY(100px); } 100% { transform: translateY(0); }}',
   },
   transitions: {
-    timeFunction: '0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94)',
+    timeFunction: '0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94)',
   },
   typography: {
-    paragraph: '18px',
-    paragraphSm: '16px',
+    paragraphDesktop: '18px',
+    paragraphTablet: '16px',
+    paragraph: '14px',
     title: '48px',
     titleSm: '38px',
   },

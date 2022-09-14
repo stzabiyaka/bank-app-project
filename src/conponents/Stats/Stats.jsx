@@ -4,7 +4,7 @@ import { StatsList, StatsListItem, StatTitle, StatValue } from './Stats.styled';
 
 const Stats = () => {
   return (
-    <Section>
+    <Section pt="80px" pb="80px">
       <Container>
         <StatsList>
           {STATS.map(stat => (

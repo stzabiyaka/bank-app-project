@@ -1,38 +1,65 @@
 import styled from '@emotion/styled';
 
 export const InfoContainer = styled.div`
-  max-width: ${({ left }) => (left ? '600px' : '470px')};
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 24px;
 
-  @media screen and (min-width: ${({ theme }) => theme.screens.sm}) {
-    margin-right: ${({ left }) => (left ? '6px' : '')};
+  @media screen and (min-width: ${({ theme }) => theme.screens.tablet}) {
+    align-items: flex-start;
+    max-width: 50%;
+    margin-right: ${({ left }) => (left ? '6px' : '0')};
+    margin-bottom: 0;
+  }
+
+  @media screen and (min-width: ${({ theme }) => theme.screens.desktop}) {
+    max-width: ${({ left }) => (left ? '600px' : '470px')};
   }
 `;
 
 export const InfoTitle = styled.h2`
-  margin: 0 0 10px 0;
+  margin-bottom: 12px;
+
   font-size: 38px;
   line-height: 1.6;
   font-weight: 600;
   letter-spacing: 0.01em;
+  text-align: center;
 
-  @media screen and (min-width: ${({ theme }) => theme.screens.sm}) {
-    margin: 0 0 24px 0;
+  color: ${({ theme }) => theme.palette.triadic};
+
+  @media screen and (min-width: ${({ theme }) => theme.screens.tablet}) {
+    margin-bottom: 20px;
+
+    font-size: 38px;
+    text-align: left;
+  }
+
+  @media screen and (min-width: ${({ theme }) => theme.screens.desktop}) {
+    margin-bottom: 24px;
     font-size: 48px;
   }
 `;
 
 export const InfoText = styled.p`
-  margin: 0 0 24px 0;
-  max-width: 570px;
+  margin-bottom: 36px;
+  max-width: 483px;
 
-  font-size: 16px;
+  font-size: ${({ theme }) => theme.typography.paragraph};
   line-height: 1.7;
   font-weight: 400;
   letter-spacing: 0.01em;
   color: ${({ theme }) => theme.palette.dimWhite};
 
-  @media screen and (min-width: ${({ theme }) => theme.screens.sm}) {
-    margin: 0 0 48px 0;
-    font-size: 18px;
+  @media screen and (min-width: ${({ theme }) => theme.screens.tablet}) {
+    font-size: ${({ theme }) => theme.typography.paragraphTablet};
+  }
+
+  @media screen and (min-width: ${({ theme }) => theme.screens.desktop}) {
+    margin-bottom: 48px;
+    max-width: 570px;
+
+    font-size: ${({ theme }) => theme.typography.paragraphDesktop};
   }
 `;

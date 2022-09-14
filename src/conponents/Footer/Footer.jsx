@@ -15,6 +15,7 @@ import {
   SocialsListItem,
   SocialIcon,
   SocialLink,
+  FooterLinksContainer,
 } from './Footer.styled';
 
 const Footer = () => {
@@ -31,12 +32,15 @@ const Footer = () => {
           </LogoLink>
           <LogoInfo>A new way to make the payments easy, reliable and secure.</LogoInfo>
         </LogoContainer>
-        {FOOTER_LINKS.map(({ title, links }, index) => (
-          <FooterLinksList title={title} links={links} key={title} />
-        ))}
+        <FooterLinksContainer>
+          {FOOTER_LINKS.map(({ title, links }, index) => (
+            <FooterLinksList title={title} links={links} key={title} />
+          ))}
+        </FooterLinksContainer>
       </FooterNav>
       <FooterBottomContainer>
-        <Copyright>Copyright &copy; 2022 HooBank. All Rights Reserved.</Copyright>
+        <Copyright>Copyright &copy; 2022 HooBank.&nbsp;</Copyright>
+        <Copyright>All Rights Reserved.</Copyright>
         <SocialsList>
           {SOCIAL_MEDIA.map(({ id, icon, link }) => (
             <SocialsListItem key={id}>

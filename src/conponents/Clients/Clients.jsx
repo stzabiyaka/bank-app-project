@@ -5,7 +5,7 @@ import { ClientIcon, ClientsList, ClientsListItem } from './Clients.styled';
 
 const Clients = () => {
   return (
-    <Section>
+    <Section pt="50px" pb="50px">
       <Container>
         <ClientsList>
           {CLIENTS.map(({ id, logo }) => (

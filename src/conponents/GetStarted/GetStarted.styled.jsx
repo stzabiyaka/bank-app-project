@@ -7,27 +7,29 @@ export const GetStartedButton = styled.button`
   width: 140px;
   height: 140px;
   padding: 2px;
+  margin: 10px 0;
   cursor: pointer;
+
+  z-index: 2;
+  color: ${({ theme }) => theme.palette.triadic};
+
+  transition: color, box-shadow, transform ${({ theme }) => theme.transitions.timeFunction};
 
   border-radius: 50%;
   border: none;
   background: ${({ theme }) => theme.bgGradients.blueGradient};
 
-  @media screen and (min-width: ${({ theme }) => theme.screens.lg}) {
+  &:hover,
+  &:focus {
+    color: ${({ theme }) => theme.palette.secondary};
+    box-shadow: ${({ theme }) => theme.shadows.buttonShadow};
+    transform: translateY(-2px);
+  }
+
+  @media screen and (min-width: ${({ theme }) => theme.screens.desktop}) {
     position: absolute;
-    top: 12px;
-    right: 60px;
-
-    z-index: 2;
-    color: ${({ theme }) => theme.palette.triadic};
-
-    transition: box-shadow ${({ theme }) => theme.transitions.timeFunction};
-
-    &:hover,
-    &:focus {
-      color: ${({ theme }) => theme.palette.secondary};
-      box-shadow: ${({ theme }) => theme.shadows.buttonShadow};
-    }
+    top: 54px;
+    right: 12px;
   }
 `;
 

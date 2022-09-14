@@ -12,7 +12,7 @@ import { FeaturesList } from './Features.styled';
 
 const Features = () => {
   return (
-    <Section id="features">
+    <Section id="features" pb="60px">
       <Container>
         <InfoContainer left>
           <InfoTitle>

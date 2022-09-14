@@ -1,48 +1,51 @@
 import styled from '@emotion/styled';
+import { InfoTitle, InfoText } from '../../utilities/styles';
 
 export const ClickToActionContainer = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: 100%;
-  padding: 72px 100px;
+  padding: 24px 24px;
 
   background: ${({ theme }) => theme.bgGradients.blackGradient};
   border: none;
   border-radius: ${({ theme }) => theme.roundRadius};
 
-  @media screen and (min-width: ${({ theme }) => theme.screens.sm}) {
+  @media screen and (min-width: ${({ theme }) => theme.screens.tablet}) {
     flex-direction: row;
-    align-items: center;
     justify-content: space-between;
+    padding: 48px 24px;
+  }
+
+  @media screen and (min-width: ${({ theme }) => theme.screens.desktop}) {
+    padding: 72px 100px;
   }
 `;
 
 export const Info = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-bottom: 20px;
-  @media screen and (min-width: ${({ theme }) => theme.screens.sm}) {
+  @media screen and (min-width: ${({ theme }) => theme.screens.tablet}) {
+    align-items: flex-start;
     margin-bottom: 0;
     margin-right: 6px;
   }
 `;
 
-export const InfoTitle = styled.h2`
-  padding: 0;
-  margin: 0 0 24px 0;
-
-  font-size: 48px;
+export const Title = styled(InfoTitle)`
   line-height: 1.4;
-  font-weight: 600;
 `;
 
-export const InfoText = styled.p`
-  padding: 0;
-  margin: 0;
+export const Text = styled(InfoText)`
   max-width: 470px;
+  margin-bottom: 12px;
 
-  font-size: 18px;
   line-height: 1.6;
-  font-weight: 400;
-  letter-spacing: 0.01em;
 
-  color: ${({ theme }) => theme.palette.dimWhite};
+  @media screen and (min-width: ${({ theme }) => theme.screens.tablet}) {
+    margin-bottom: 0;
+  }
 `;

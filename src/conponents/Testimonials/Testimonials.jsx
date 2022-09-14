@@ -11,7 +11,7 @@ import {
 
 const Testimonials = () => {
   return (
-    <Section id="clients">
+    <Section id="clients" pb="50px">
       <TestimonialsContainer>
         <TestimonialsInfoContainer>
           <TestimonialsInfoTitle>What people are saying about us</TestimonialsInfoTitle>

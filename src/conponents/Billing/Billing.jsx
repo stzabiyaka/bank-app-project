@@ -1,10 +1,8 @@
 import { Section, Container, InfoContainer, InfoTitle, InfoText } from '../../utilities/styles';
-import { apple, google, bill } from '../../assets';
+import { stores, bill } from '../../assets';
 import {
   BillingPictureContainer,
   BillingPicture,
-  GradientLayer_1,
-  GradientLayer_2,
   Icon,
   IconsList,
   IconsListItem,
@@ -13,12 +11,10 @@ import {
 
 const Billing = () => {
   return (
-    <Section id="product">
+    <Section id="product" pb="60px">
       <Container reverse>
         <BillingPictureContainer>
           <BillingPicture src={bill} alt="Billing" />
-          <GradientLayer_1 zIndex={3} />
-          <GradientLayer_2 zIndex={0} />{' '}
         </BillingPictureContainer>
         <InfoContainer>
           <InfoTitle>Easily control your billing & invoicing.</InfoTitle>
@@ -34,7 +30,9 @@ const Billing = () => {
                 rel="noreferrer noopener nofollow"
                 target="_blank"
               >
-                <Icon src={apple} alt="Apple Store" />
+                <Icon aria-label="Apple Store" width="110" height="28">
+                  <use href={`${stores}#logo-apple`} />
+                </Icon>
               </StoreLink>
             </IconsListItem>
             <IconsListItem>
@@ -44,7 +42,9 @@ const Billing = () => {
                 rel="noreferrer noopener nofollow"
                 target="_blank"
               >
-                <Icon src={google} alt="Google Play" />
+                <Icon aria-label="Google Play" width="122" height="30">
+                  <use href={`${stores}#logo-google`} />
+                </Icon>
               </StoreLink>
             </IconsListItem>
           </IconsList>

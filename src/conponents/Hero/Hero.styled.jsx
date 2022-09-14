@@ -3,25 +3,48 @@ import styled from '@emotion/styled';
 export const HeroSection = styled.section`
   display: flex;
   flex-direction: column;
-  width: 100vw;
-  margin-top: 35px;
+  align-items: center;
+  width: 100%;
+  padding: ${({ theme }) => theme.padding.section} 0;
 
-  @media screen and (min-width: ${({ theme }) => theme.screens.sm}) {
+  @media screen and (min-width: ${({ theme }) => theme.screens.tablet}) {
     flex-direction: row;
+    padding-bottom: ${({ theme }) => theme.padding.sectionTablet};
+  }
+
+  @media screen and (min-width: ${({ theme }) => theme.screens.desktop}) {
+    padding-bottom: ${({ theme }) => theme.padding.sectionDesktop};
   }
 `;
 
 export const HeroContainer = styled.div`
   display: flex;
-  flex-direction: column;
-  margin: 0 ${({ theme }) => theme.padding.paddingSm};
-  max-width: 670px;
+  flex-direction: column-reverse;
+  margin-left: ${({ theme }) => theme.padding.paddingSm};
+  max-width: ${({ theme }) => theme.container.maxHero};
 
-  @media screen and (min-width: ${({ theme }) => theme.screens.sm}) {
-    margin: 0 ${({ theme }) => theme.padding.padding};
+  @media screen and (min-width: ${({ theme }) => theme.screens.tablet}) {
+    flex-direction: row;
+    align-items: center;
+    margin-left: ${({ theme }) => theme.padding.paddingSm};
   }
-  @media screen and (min-width: 1292px) {
-    margin: 0 calc((100vw - 1280px) / 2);
+  @media screen and (min-width: calc(${({ theme }) => theme.container.max} + (${({ theme }) =>
+      theme.padding.paddingSm} * 2))) {
+    margin-left: calc((100% - (${({ theme }) => theme.container.max})) / 2);
+  }
+`;
+
+export const HeroInfo = styled.div`
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: ${({ theme }) => theme.padding.paddingSm};
+
+  @media screen and (min-width: ${({ theme }) => theme.screens.tablet}) {
+    align-items: flex-start;
+    max-width: 670px;
+    margin-right: ${({ theme }) => theme.padding.padding};
   }
 `;
 
@@ -43,45 +66,46 @@ export const DiscountIcon = styled.svg`
 `;
 
 export const DiscountText = styled.p`
-  padding: 0;
-  margin: 0;
   color: ${({ theme }) => theme.palette.triadic};
-  font-size: 18px;
+  font-size: ${({ theme }) => theme.typography.paragraph};
   line-height: 1.5;
   font-weight: 400;
   text-transform: uppercase;
+
+  @media screen and (min-width: ${({ theme }) => theme.screens.tablet}) {
+    font-size: ${({ theme }) => theme.typography.paragraphTablet};
+  }
+
+  @media screen and (min-width: ${({ theme }) => theme.screens.desktop}) {
+    font-size: ${({ theme }) => theme.typography.paragraphDesktop};
+  }
 `;
 
 export const DiscountSpan = styled.span`
   color: ${({ theme }) => theme.palette.dimWhite};
 `;
 
-export const HeroTitleContainer = styled.div`
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-
+export const HeroTitle = styled.h1`
   margin-bottom: 20px;
 
-  @media screen and (min-width: ${({ theme }) => theme.screens.sm}) {
-    margin-bottom: 40px;
-  }
-`;
-
-export const HeroTitle = styled.h1`
-  margin: 0;
-  padding: 0;
-
-  color: ${({ theme }) => theme.palette.triadic};
-  font-size: 50px;
+  font-size: 40px;
   line-height: 1.2;
   font-weight: 600;
   letter-spacing: 1;
+  text-align: center;
 
-  @media screen and (min-width: ${({ theme }) => theme.screens.sm}) {
-    font-size: 72px;
+  color: ${({ theme }) => theme.palette.triadic};
+
+  @media screen and (min-width: ${({ theme }) => theme.screens.tablet}) {
+    margin-bottom: 30px;
+
+    font-size: 52px;
     line-height: 1.4;
+    text-align: left;
+  }
+  @media screen and (min-width: ${({ theme }) => theme.screens.desktop}) {
+    font-size: 72px;
+    margin-bottom: 40px;
   }
 `;
 
@@ -98,25 +122,58 @@ export const HeroText = styled.p`
 
   color: ${({ theme }) => theme.palette.dimWhite};
 
-  font-size: 14px;
+  font-size: ${({ theme }) => theme.typography.paragraph};
   line-height: 1.5;
   font-weight: 400;
 
-  @media screen and (min-width: ${({ theme }) => theme.screens.sm}) {
-    font-size: 18px;
+  @media screen and (min-width: ${({ theme }) => theme.screens.tablet}) {
+    font-size: ${({ theme }) => theme.typography.paragraphTablet};
     line-height: 1.7;
+  }
+  @media screen and (min-width: ${({ theme }) => theme.screens.desktop}) {
+    font-size: ${({ theme }) => theme.typography.paragraphDesktop};
   }
 `;
 
 export const HeroPictureContainer = styled.div`
   position: relative;
+  align-self: flex-start;
+  position: relative;
   display: flex;
-  align-items: center;
-  /* max-width: 669px; */
+
+  @media screen and (min-width: ${({ theme }) => theme.screens.desktop}) {
+    max-width: 669px;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 40%;
+    height: 100%;
+    left: 25%;
+    bottom: 18%;
+    z-index: ${({ zIndex }) => zIndex};
+    transform-origin: bottom center;
+    transform: perspective(669px) rotateX(-60deg);
+    background: ${({ theme }) => theme.bgGradients.navyGradient};
+    filter: blur(123px);
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    right: 3%;
+    bottom: 35%;
+    width: 65%;
+    height: 70%;
+    border-radius: 50%;
+    z-index: ${({ zIndex }) => zIndex};
+    background: ${({ theme }) => theme.bgGradients.whiteGradient};
+    filter: blur(750px);
+  }
 `;
 
 export const HeroPicture = styled.img`
-  display: block;
   max-width: 100%;
   object-fit: contain;
   z-index: 5;
@@ -133,45 +190,4 @@ export const GradientSkew = styled.div`
   transform: rotate(25deg);
   background: ${({ theme }) => theme.bgGradients.lightBlueGradient};
   filter: blur(650px);
-`;
-
-export const GradientEllipse = styled.div`
-  position: absolute;
-  right: 3%;
-  bottom: 35%;
-  width: 65%;
-  height: 70%;
-  border-radius: 50%;
-  z-index: ${({ zIndex }) => zIndex};
-  background: ${({ theme }) => theme.bgGradients.whiteGradient};
-  filter: blur(750px);
-`;
-
-export const GradientTrapezoid = styled.div`
-  position: absolute;
-  width: 40%;
-  height: 100%;
-  left: 25%;
-  bottom: 18%;
-  z-index: ${({ zIndex }) => zIndex};
-  transform-origin: bottom center;
-  transform: perspective(669px) rotateX(-60deg);
-  background: ${({ theme }) => theme.bgGradients.navyGradient};
-  filter: blur(123px);
-`;
-
-export const GradientLayerBottom = styled.div`
-  position: absolute;
-  width: 85%;
-  height: 100%;
-  bottom: 0;
-  border-radius: 50%;
-  z-index: 1;
-  transform-origin: bottom center;
-  transform: perspective(70vh) rotateX(-65deg);
-  background-image: ${({ theme }) => theme.bgGradients.navyGradient};
-  background-size: 40% 100%;
-  background-position: bottom 24vh left 50%;
-  background-repeat: no-repeat;
-  filter: blur(123px);
 `;

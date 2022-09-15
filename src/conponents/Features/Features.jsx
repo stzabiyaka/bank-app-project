@@ -1,14 +1,8 @@
-import {
-  Section,
-  Container,
-  Button,
-  InfoContainer,
-  InfoTitle,
-  InfoText,
-} from '../../utilities/styles';
+import { Section, Container, InfoContainer, InfoTitle, InfoText } from '../../utilities/styles';
 import { FEATURES } from '../../constatnts';
 import FeaturesCard from '../FeaturesCard/FeaturesCard';
 import { FeaturesList } from './Features.styled';
+import Button from '../Button';
 
 const Features = () => {
   return (

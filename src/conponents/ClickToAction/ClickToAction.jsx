@@ -1,5 +1,6 @@
-import { Section, Container, Button } from '../../utilities/styles';
+import { Section, Container } from '../../utilities/styles';
 import { ClickToActionContainer, Info, Text, Title } from './ClickToAction.styled';
+import Button from '../Button';
 
 const ClickToAction = () => {
   return (

@@ -4,7 +4,7 @@ export const AppContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-width: 100vw;
+  width: 100%;
   min-height: 100vh;
   overflow: hidden;
 

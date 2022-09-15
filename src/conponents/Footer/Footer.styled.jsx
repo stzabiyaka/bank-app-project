@@ -76,8 +76,8 @@ export const LogoLink = styled.a`
   &:hover,
   &:focus {
     color: ${({ theme }) => theme.palette.secondary};
-    filter: drop-shadow(5px 5px 5px ${({ theme }) => theme.palette.dimWhite});
-    transform: translateY(-2px);
+    filter: drop-shadow(5px 5px 5px ${({ theme }) => theme.palette.shaded});
+    transform: scale(1.05);
   }
 `;
 

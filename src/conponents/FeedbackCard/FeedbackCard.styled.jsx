@@ -35,6 +35,7 @@ export const FeedbsckCardContainer = styled.li`
 
   &:hover {
     background: ${({ theme }) => theme.bgGradients.blackGradient};
+    color: ${({ theme }) => theme.palette.secondary};
   }
 `;
 

@@ -10,8 +10,11 @@ import Clients from '../Clients';
 import ClickToAction from '../ClickToAction';
 import Footer from '../Footer';
 import { AppContainer, Main } from '.';
+import Modal from '../Modal/Modal';
+import { useModal } from '../../utilities/appContext/appContext';
 
 const App = () => {
+  const { showModal } = useModal();
   return (
     <AppContainer>
       <AppBar />
@@ -26,6 +29,7 @@ const App = () => {
         <ClickToAction />
       </Main>
       <Footer />
+      {showModal && <Modal>Form</Modal>}
     </AppContainer>
   );
 };

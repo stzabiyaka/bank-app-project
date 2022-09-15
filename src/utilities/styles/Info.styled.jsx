@@ -21,7 +21,7 @@ export const InfoContainer = styled.div`
 export const InfoTitle = styled.h2`
   margin-bottom: 12px;
 
-  font-size: 38px;
+  font-size: ${({ theme }) => theme.typography.title};
   line-height: 1.6;
   font-weight: 600;
   letter-spacing: 0.01em;
@@ -32,13 +32,13 @@ export const InfoTitle = styled.h2`
   @media screen and (min-width: ${({ theme }) => theme.screens.tablet}) {
     margin-bottom: 20px;
 
-    font-size: 38px;
+    font-size: ${({ theme }) => theme.typography.titleTablet};
     text-align: left;
   }
 
   @media screen and (min-width: ${({ theme }) => theme.screens.desktop}) {
     margin-bottom: 24px;
-    font-size: 48px;
+    font-size: ${({ theme }) => theme.typography.titleDesktop};
   }
 `;
 

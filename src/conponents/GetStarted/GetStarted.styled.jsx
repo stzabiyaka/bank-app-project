@@ -10,7 +10,7 @@ export const GetStartedButton = styled.button`
   margin: 10px 0;
   cursor: pointer;
 
-  z-index: 2;
+  z-index: 1;
   color: ${({ theme }) => theme.palette.triadic};
 
   transition: color, box-shadow, transform ${({ theme }) => theme.transitions.timeFunction};
@@ -23,7 +23,7 @@ export const GetStartedButton = styled.button`
   &:focus {
     color: ${({ theme }) => theme.palette.secondary};
     box-shadow: ${({ theme }) => theme.shadows.buttonShadow};
-    transform: translateY(-2px);
+    transform: scale(1.05);
   }
 
   @media screen and (min-width: ${({ theme }) => theme.screens.desktop}) {

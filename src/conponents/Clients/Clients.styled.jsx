@@ -14,10 +14,6 @@ export const ClientsList = styled.ul`
 export const ClientsListItem = styled.li`
   margin-bottom: 10px;
 
-  color: #424147;
-
-  transition: filter, color ${({ theme }) => theme.transitions.timeFunction};
-
   &:last-child {
     margin-bottom: 0;
   }
@@ -25,10 +21,17 @@ export const ClientsListItem = styled.li`
   @media screen and (min-width: ${({ theme }) => theme.screens.tablet}) {
     margin-bottom: 0;
   }
+`;
 
-  &:hover {
+export const ClientsLink = styled.a`
+  color: #424147;
+
+  transition: color, filter ${({ theme }) => theme.transitions.timeFunction};
+
+  &:hover,
+  &:focus {
     color: ${({ theme }) => theme.palette.secondary};
-    filter: drop-shadow(5px 5px 5px ${({ theme }) => theme.palette.dimWhite});
+    filter: drop-shadow(5px 5px 5px ${({ theme }) => theme.palette.shaded});
   }
 `;
 

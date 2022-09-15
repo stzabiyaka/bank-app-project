@@ -11,13 +11,8 @@ export const theme = {
     poppins: ['Poppins', 'sans-serif'],
   },
   screens: {
-    xs: '480px',
     mobile: '480px',
-    ss: '620px',
-    sm: '768px',
     tablet: '768px',
-    md: '1060px',
-    lg: '1200px',
     desktop: '1200px',
     desktopXl: '1440px',
   },
@@ -50,16 +45,10 @@ export const theme = {
       'radial-gradient(64.18% 64.18% at 71.16% 35.69%, #def9fa 0.89%, #bef3f5 17.23%, #9dedf0 42.04%, #7de7eb 55.12%, #5ce1e6 71.54%, #33bbcf 100%)',
   },
   shadows: {
-    basicShadow: '0 20px 100px -10px rgba(66, 71, 91, 0.1)',
     cardShadow: '0 20px 100px -10px rgba(66, 71, 91, 0.1)',
     buttonShadow: '0 0 24px rgba(0, 217, 245, 0.6)',
   },
   roundRadius: '20px',
-  sideBar: {
-    animation: 'slide-top 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94)',
-    keyFrames:
-      '@keyframes slide-top {0% { transform: translateY(100px); } 100% { transform: translateY(0); }}',
-  },
   transitions: {
     timeFunction: '0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94)',
   },
@@ -67,7 +56,8 @@ export const theme = {
     paragraphDesktop: '18px',
     paragraphTablet: '16px',
     paragraph: '14px',
-    title: '48px',
-    titleSm: '38px',
+    title: '32px',
+    titleTablet: '38px',
+    titleDesktop: '48px',
   },
 };

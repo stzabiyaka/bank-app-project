@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 
-export const Button = styled.button`
+export const ButtonStyled = styled.button`
   display: flex;
   align-items: center;
   min-width: fit-content;
@@ -24,6 +24,6 @@ export const Button = styled.button`
   &:hover,
   &:focus {
     box-shadow: ${({ theme }) => theme.shadows.buttonShadow};
-    transform: translateY(-2px);
+    transform: scale(1.05);
   }
 `;

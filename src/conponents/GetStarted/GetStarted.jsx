@@ -5,10 +5,12 @@ import {
   GetStartedGradientSpan,
   GetStartedIcon,
 } from './GetStarted.styled';
+import { useModal } from '../../utilities/appContext/appContext';
 
 const GetStarted = () => {
+  const { toggle } = useModal();
   return (
-    <GetStartedButton>
+    <GetStartedButton onClick={toggle}>
       <GetStartedButtonContent>
         <GetStartedGradientSpan>
           Get

@@ -5,23 +5,13 @@ export const HeroSection = styled.section`
   flex-direction: column;
   align-items: center;
   width: 100%;
-  padding: ${({ theme }) => theme.padding.section} 0;
-
-  @media screen and (min-width: ${({ theme }) => theme.screens.tablet}) {
-    flex-direction: row;
-    padding-bottom: ${({ theme }) => theme.padding.sectionTablet};
-  }
-
-  @media screen and (min-width: ${({ theme }) => theme.screens.desktop}) {
-    padding-bottom: ${({ theme }) => theme.padding.sectionDesktop};
-  }
+  padding-top: ${({ theme }) => theme.padding.section};
 `;
 
 export const HeroContainer = styled.div`
   display: flex;
   flex-direction: column-reverse;
   margin-left: ${({ theme }) => theme.padding.paddingSm};
-  max-width: ${({ theme }) => theme.container.maxHero};
 
   @media screen and (min-width: ${({ theme }) => theme.screens.tablet}) {
     flex-direction: row;
@@ -140,10 +130,6 @@ export const HeroPictureContainer = styled.div`
   align-self: flex-start;
   position: relative;
   display: flex;
-
-  @media screen and (min-width: ${({ theme }) => theme.screens.desktop}) {
-    max-width: 669px;
-  }
 
   &::before {
     content: '';

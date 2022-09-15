@@ -1,13 +1,7 @@
-import {
-  Section,
-  Container,
-  InfoContainer,
-  InfoTitle,
-  InfoText,
-  Button,
-} from '../../utilities/styles';
+import { Section, Container, InfoContainer, InfoTitle, InfoText } from '../../utilities/styles';
 import { card } from '../../assets';
 import { CardDealPicture, CardDealPictureContainer } from './CardDeal.styled';
+import Button from '../Button';
 
 const CardDeal = () => {
   return (

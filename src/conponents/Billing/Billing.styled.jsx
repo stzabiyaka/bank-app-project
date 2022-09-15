@@ -48,11 +48,11 @@ export const IconsList = styled.ul`
   display: flex;
   justify-content: center;
   margin-bottom: 20px;
-  margin-left: 12px;
 
   @media screen and (min-width: ${({ theme }) => theme.screens.tablet}) {
     justify-content: flex-start;
     margin-bottom: 0;
+    margin-left: 12px;
   }
 `;
 
@@ -77,7 +77,7 @@ export const StoreLink = styled.a`
   &:hover,
   &:focus {
     color: ${({ theme }) => theme.palette.secondary};
-    filter: drop-shadow(5px 5px 5px ${({ theme }) => theme.palette.dimWhite});
+    filter: drop-shadow(5px 5px 5px ${({ theme }) => theme.palette.shaded});
   }
 `;
 

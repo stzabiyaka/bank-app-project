@@ -105,3 +105,6 @@ dist
 
 # Prettier file
 .prettierrc.json
+
+# Netlify file
+.netlify.toml

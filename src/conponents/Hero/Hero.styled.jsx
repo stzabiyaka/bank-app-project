@@ -154,7 +154,8 @@ export const HeroPictureContainer = styled.div`
     height: 70%;
     border-radius: 50%;
     z-index: ${({ zIndex }) => zIndex};
-    background: ${({ theme }) => theme.bgGradients.whiteGradient};
+    background: -webkit-radial-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.5));
+    background: -moz-radial-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
     filter: blur(750px);
   }
 `;
@@ -163,17 +164,4 @@ export const HeroPicture = styled.img`
   max-width: 100%;
   object-fit: contain;
   z-index: 5;
-`;
-
-export const GradientSkew = styled.div`
-  position: absolute;
-  bottom: 30%;
-  right: -40%;
-  width: 80%;
-  height: 70%;
-  border-radius: 50%;
-  z-index: ${({ zIndex }) => zIndex};
-  transform: rotate(25deg);
-  background: ${({ theme }) => theme.bgGradients.lightBlueGradient};
-  filter: blur(650px);
 `;

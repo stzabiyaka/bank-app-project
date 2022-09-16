@@ -18,7 +18,12 @@ export const TestimonialsContainer = styled.div`
     top: 10%;
     z-index: 0;
 
-    background: ${({ theme }) => theme.bgGradients.lightBlueGradient};
+    background: -webkit-${({ theme }) => theme.bgGradients.lightBlueGradient};
+    background: -moz-linear-gradient(
+      90deg,
+      rgba(26, 41, 128, 0.2) 0%,
+      rgba(38, 208, 205, 0.2) 100%
+    );
     filter: blur(350px);
     border-radius: 200px;
     transform: rotate(47.46deg);

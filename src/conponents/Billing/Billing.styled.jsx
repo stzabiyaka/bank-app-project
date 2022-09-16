@@ -20,7 +20,8 @@ export const BillingPictureContainer = styled.div`
     width: 63%;
     height: 81%;
     border-radius: 50%;
-    background: ${({ theme }) => theme.bgGradients.whiteGradient};
+    background: -webkit-radial-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.5));
+    background: -moz-radial-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
     filter: blur(750px);
 
     transform: rotate(176.62deg);
@@ -34,7 +35,12 @@ export const BillingPictureContainer = styled.div`
     width: 27%;
     height: 88%;
     border-radius: 50%;
-    background: ${({ theme }) => theme.bgGradients.pinkGradient};
+    background: -webkit-${({ theme }) => theme.bgGradients.pinkGradient};
+    background: -moz-linear-gradient(
+      90deg,
+      rgba(244, 196, 243, 0.2) 0%,
+      rgba(252, 103, 249, 0.2) 100%
+    );
     transform: rotate(156.61deg);
     filter: blur(900px);
   }

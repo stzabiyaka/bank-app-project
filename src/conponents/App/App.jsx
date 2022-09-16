@@ -12,6 +12,7 @@ import Footer from '../Footer';
 import { AppContainer, Main } from '.';
 import Modal from '../Modal/Modal';
 import { useModal } from '../../utilities/appContext/appContext';
+import BackScrollButton from '../BackScrollButton/BackScrollButton';
 
 const App = () => {
   const { showModal } = useModal();
@@ -29,7 +30,8 @@ const App = () => {
         <ClickToAction />
       </Main>
       <Footer />
-      {showModal && <Modal>Form</Modal>}
+      {showModal && <Modal />}
+      <BackScrollButton />
     </AppContainer>
   );
 };

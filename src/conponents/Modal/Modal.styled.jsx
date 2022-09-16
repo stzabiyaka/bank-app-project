@@ -17,22 +17,24 @@ export const Backdrop = styled.div`
 `;
 
 export const ModalContainer = styled.div`
-  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 90%;
+  width: fit-content;
   padding: ${({ theme }) => theme.padding.paddingSm};
+  padding-bottom: calc(${({ theme }) => theme.padding.paddingSm} * 2);
+
   background: ${({ theme }) => theme.bgGradients.discountGradient};
 
   border-radius: ${({ theme }) => theme.roundRadius};
-  box-shadow: 0 0 40px ${({ theme }) => theme.palette.shaded};
-
-  @media screen and (min-width: ${({ theme }) => theme.screens.mobile}) {
-    width: fit-content;
-  }
+  box-shadow: 0 0 50px ${({ theme }) => theme.palette.shaded};
 `;
 
 export const CloseButton = styled.button`
   display: flex;
   align-items: center;
-  margin: 0 0 8px auto;
+  margin: 0 0 24px auto;
   padding: 0;
   width: 28px;
   height: 28px;
@@ -59,4 +61,23 @@ export const Icon = styled.svg`
   height: 28px;
   object-fit: contain;
   fill: currentColor;
+`;
+
+export const Welcome = styled.p`
+  margin-bottom: 24px;
+  font-size: ${({ theme }) => theme.typography.paragraphDesktop};
+  text-align: center;
+  font-weight: 500;
+
+  color: ${({ theme }) => theme.palette.triadic};
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+`;
+
+export const Name = styled(Welcome)`
+  font-size: ${({ theme }) => theme.typography.title};
+  font-weight: 600;
+  color: ${({ theme }) => theme.palette.secondary};
 `;

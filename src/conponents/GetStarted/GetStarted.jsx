@@ -8,9 +8,9 @@ import {
 import { useModal } from '../../utilities/appContext/appContext';
 
 const GetStarted = () => {
-  const { toggle } = useModal();
+  const { show } = useModal();
   return (
-    <GetStartedButton onClick={toggle}>
+    <GetStartedButton type="button" onClick={show}>
       <GetStartedButtonContent>
         <GetStartedGradientSpan>
           Get

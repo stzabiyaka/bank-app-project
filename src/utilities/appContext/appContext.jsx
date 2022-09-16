@@ -9,7 +9,9 @@ export const useModal = () => useContext(AppContext);
 export const AppProvider = ({ children }) => {
   const [showModal, setShowModal] = useState(false);
 
-  const toggle = () => setShowModal(state => !state);
+  const show = () => setShowModal(true);
 
-  return <AppContext.Provider value={{ showModal, toggle }}>{children}</AppContext.Provider>;
+  const hide = () => setShowModal(false);
+
+  return <AppContext.Provider value={{ showModal, show, hide }}>{children}</AppContext.Provider>;
 };

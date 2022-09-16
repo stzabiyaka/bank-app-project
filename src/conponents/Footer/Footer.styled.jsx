@@ -27,6 +27,7 @@ export const FooterNav = styled.div`
   @media screen and (min-width: ${({ theme }) => theme.screens.tablet}) {
     flex-direction: row;
     justify-content: space-between;
+    align-items: flex-start;
     max-width: ${({ theme }) => theme.container.max};
     margin-bottom: 40px;
   }

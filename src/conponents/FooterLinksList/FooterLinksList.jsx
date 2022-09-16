@@ -13,7 +13,7 @@ const FooterLinksList = ({ title, links }) => {
       <LinksList>
         {links.map(({ name, link }) => (
           <LinksListItem key={name}>
-            <Link href={link} target="#" title={`Go to ${name}`}>
+            <Link href="#" title={`Go to ${name}`}>
               {name}
             </Link>
           </LinksListItem>

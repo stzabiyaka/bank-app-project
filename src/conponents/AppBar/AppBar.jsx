@@ -7,7 +7,7 @@ import { AppBarContainer, LogoLink, LogoIcon, LogoSpan } from './AppBar.styled';
 const AppBar = () => {
   const ref = NAV_LINKS[0];
   return (
-    <Header>
+    <Header id="home">
       <AppBarContainer>
         <LogoLink href={`#${ref.id}`} title={ref.title}>
           <LogoIcon aria-label="HooBank logo">

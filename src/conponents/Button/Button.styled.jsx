@@ -2,11 +2,13 @@ import styled from '@emotion/styled';
 
 export const ButtonStyled = styled.button`
   display: flex;
+  justify-content: center;
   align-items: center;
   min-width: fit-content;
 
   padding: 18px 33px;
 
+  font-family: inherit;
   font-size: 18px;
   line-height: 1.5;
   font-weight: 500;

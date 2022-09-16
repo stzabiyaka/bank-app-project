@@ -17,14 +17,17 @@ export const FooterLinksContainer = styled.div`
 `;
 
 export const LinksListTitle = styled.h3`
-  padding: 0;
   margin: 0 0 24px 0;
 
-  font-size: 18px;
+  font-size: ${({ theme }) => theme.typography.paragraphTablet};
   line-height: 1.5;
   font-weight: 500;
 
   color: ${({ theme }) => theme.palette.triadic};
+
+  @media screen and (min-width: ${({ theme }) => theme.screens.tabletDesktop}) {
+    font-size: ${({ theme }) => theme.typography.paragraphDesktop};
+  }
 `;
 
 export const LinksList = styled.ul`
@@ -43,12 +46,16 @@ export const LinksListItem = styled.li`
 
 export const Link = styled.a`
   color: rgba(255, 255, 255, 0.7);
-  font-size: 16px;
+  font-size: ${({ theme }) => theme.typography.paragraph};
   line-height: 1.5;
   font-weight: 400;
   text-decoration: none;
 
   transition: color, filter ${({ theme }) => theme.transitions.timeFunction};
+
+  @media screen and (min-width: ${({ theme }) => theme.screens.tablet}) {
+    font-size: ${({ theme }) => theme.typography.paragraphTablet};
+  }
 
   &:hover,
   &:focus {

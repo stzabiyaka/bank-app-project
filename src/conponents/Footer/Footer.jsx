@@ -20,6 +20,7 @@ import {
 
 const Footer = () => {
   const ref = NAV_LINKS[0];
+  const year = new Date().getFullYear();
   return (
     <FooterContainer>
       <FooterNav>
@@ -39,7 +40,7 @@ const Footer = () => {
         </FooterLinksContainer>
       </FooterNav>
       <FooterBottomContainer>
-        <Copyright>Copyright &copy; 2022 HooBank.&nbsp;</Copyright>
+        <Copyright>Copyright &copy; {year} HooBank.&nbsp;</Copyright>
         <Copyright>All Rights Reserved.</Copyright>
         <SocialsList>
           {SOCIAL_MEDIA.map(({ id, icon, link }) => (

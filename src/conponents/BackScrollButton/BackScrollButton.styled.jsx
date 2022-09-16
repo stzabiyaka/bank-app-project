@@ -3,8 +3,8 @@ import styled from '@emotion/styled';
 export const Button = styled.button`
   display: block;
   position: fixed;
-  bottom: 50px;
-  right: 50px;
+  bottom: 20px;
+  right: 20px;
   padding: 0;
   border: none;
   border-radius: 50%;
@@ -16,6 +16,11 @@ export const Button = styled.button`
   cursor: pointer;
 
   transition: color ${({ theme }) => theme.transitions.timeFunction};
+
+  @media screen and (min-width: ${({ theme }) => theme.screens.desktop}) {
+    bottom: 50px;
+    right: 50px;
+  }
 
   &:hover,
   &:focus {

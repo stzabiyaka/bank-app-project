@@ -7,11 +7,25 @@ export const FormContainer = styled.form`
   width: 100%;
 `;
 
+export const InputLabel = styled.label`
+  width: 100%;
+  font-size: 12px;
+  margin-bottom: 24px;
+
+  text-transform: capitalize;
+`;
+export const InputLabelText = styled.p`
+  font-size: 12px;
+  margin-bottom: 4px;
+
+  text-transform: capitalize;
+`;
+
 export const InputField = styled.input`
   width: 100%;
   min-height: 60px;
-  margin-bottom: 24px;
   padding: 10px;
+  margin-bottom: 4px;
 
   font-family: ${({ theme }) => theme.fontFamily.poppins};
   font-size: ${({ theme }) => theme.typography.paragraphTablet};
@@ -19,12 +33,8 @@ export const InputField = styled.input`
 
   color: ${({ theme }) => theme.palette.primary};
 
-  border-radius: 5px;
-  border: none;
-
-  &:last-of-type {
-    margin-bottom: 24px;
-  }
+  border-radius: 6px;
+  border: 2px solid ${({ theme }) => theme.palette.primary};
 
   &:focus-within {
     outline: 2px solid ${({ theme }) => theme.palette.shaded};
@@ -35,14 +45,8 @@ export const InputField = styled.input`
   }
 `;
 
-export const InputLabel = styled.label`
-  align-self: flex-start;
-  font-size: 12px;
-  margin-bottom: 4px;
-`;
-
 export const Warn = styled.span`
-  color: red;
+  color: #ff4040;
 `;
 
 export const FormInfo = styled.p`

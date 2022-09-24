@@ -158,6 +158,12 @@ export const HeroPictureContainer = styled.div`
     background: -moz-radial-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
     filter: blur(750px);
   }
+
+  &:hover {
+    &::before {
+      filter: blur(75px);
+    }
+  }
 `;
 
 export const HeroPicture = styled.img`

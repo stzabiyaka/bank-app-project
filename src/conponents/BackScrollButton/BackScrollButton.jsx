@@ -2,6 +2,8 @@ import { Icon, Button } from './BackScrollButton.styled';
 import { icons } from '../../assets';
 import { useState, useEffect } from 'react';
 
+const OFFSET_TRIGGER = 100;
+
 const BackScrollButton = () => {
   const [visible, setVisible] = useState(false);
 
@@ -11,10 +13,10 @@ const BackScrollButton = () => {
 
   const handleVisibility = () => {
     const offset = window.pageYOffset;
-    if (offset > 100 && !visible) {
+    if (offset > OFFSET_TRIGGER && !visible) {
       return setVisible(true);
     }
-    if (offset <= 100) {
+    if (offset <= OFFSET_TRIGGER) {
       return setVisible(false);
     }
   };

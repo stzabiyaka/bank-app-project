@@ -7,6 +7,7 @@ export const Backdrop = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  min-width: 270px;
   width: 100vw;
   height: 100vh;
   overflow-y: scroll;
